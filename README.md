@@ -1,5 +1,3 @@
-<img width="304" height="62" alt="image" src="https://github.com/user-attachments/assets/5dec8f85-bded-46d0-8bf2-92f8534d3ba4" /># Founding
-
 ![GitHub Logo](/Founding/eren1.png)
 
 ## Description
