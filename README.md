@@ -1,11 +1,11 @@
 # Founding 🛠️
 ![GitHub Logo](/Founding/eren1.png)
 
-## Description
+## Overview 📖
 **Founding** is a powerful tool that processes shellcode in `.bin`, `.exe`, or `.dll` formats, applying advanced **obfuscation** or **encryption** techniques to generate stealthy binaries with sophisticated execution methods. 
 
-## Features
-### In every compilation:
+## Features ✨
+### Core Features (Applied in Every Compilation)
 
 - **Dynamic API Hashing**  
   - Dynamic API Hashing generates unique hash values for API functions at runtime
