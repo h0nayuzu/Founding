@@ -35,7 +35,7 @@ Founding is a tool that receives a Shellcode in ```.bin```, ```.exe``` or ```.dl
 
 - Randomly generated encryption keys on every run
 
-### Generators types to permit the usage of ```.bin```,```.exe``` and ```.dll```:
+### Generators for the usage of ```.bin```,```.exe``` and ```.dll```:
 
 - **Raw**
   - Use of .bin payload
