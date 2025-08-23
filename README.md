@@ -158,6 +158,8 @@ Founding.exe donut mimikatz.exe mac fibers --hells-hall
 - Download the zip from releases
 - The code from each compilation can be found on \output\code\
 - To test newly crafted DLLs, a dedicated executable file, ```dlltest.exe```, has been prepared and can be located within the \founding\misc\dll_test directory.
+- Within the \founding\dependencies\ directory, you will find the ```vs_BuildTools.exe``` file, accompanied by a Readme.txt document, both of which are essential for Clang-LLVM compiler.
+  
 ## Demo
 ### Meterpreter
 [![Meterpreter](https://i.imgur.com/hucwlKw.png)](https://youtu.be/71vjbatJMIo)
