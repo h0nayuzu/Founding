@@ -20,14 +20,14 @@
 - **Preamble 0xFC 0x48**   
   Prepends `xFCx48` to shellcode to bypass static analysis.
  
-### Encryption and Obfuscation:
+### Encryption and Obfuscation
 
 - Supports **IPv4/IPv6/MAC/UUID** obfuscation.
 - Offers **XOR**, **RC4**, and **AES** encryption.
 - Includes **payload padding** for extra obfuscation.
 - Generates **random encryption keys** per run.
 
-### Generators for the usage of ```.bin```,```.exe``` and ```.dll```:
+### Generators Types
 
 - **Raw**   
   Directly processes `.bin` payloads.
@@ -39,7 +39,7 @@
   Converts `.exe` to `.bin` using PS2EXE and Donut.
 
 
-### Execution types:
+### Execution types
 - **APC**   
   Executes via Asynchronous Procedure Calls.
 - **Early-Bird-Debug**   
