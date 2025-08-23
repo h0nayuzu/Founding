@@ -147,7 +147,7 @@
 ![GitHub Logo](/Founding/helper1.png)
 ![GitHub Logo](/Founding/helper2.png)
 
-### Sintax
+### Syntax
 
 ```bash
 Founding.exe <Generator type> <File.bin/.exe/.dll> <Enc/Obf Option> <Execution type> <Optional flags>
