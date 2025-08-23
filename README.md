@@ -63,8 +63,9 @@ Founding is a tool that receives a Shellcode in ```.bin```, ```.exe``` or ```.dl
 
 ### Founding has the following optional features:
 
-- **Local-Hollowing**
-  - Duplicates thread to recreate and run the PE in suspended main thread
+- **Indirect-Syscalls**
+  - Hells-Hall - Change all implementation to Indirect Syscalls (HellsHall) including optional flags
+  - Syswhispers3 - Change all implementation to Indirect Syscalls (SysWhispers3) including optional flags
 
 
 - **Local-Hollowing**
