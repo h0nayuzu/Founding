@@ -190,5 +190,7 @@ Founding.exe donut mimikatz.exe mac fibers --hells-hall
 ## Credits
 - Some techniques used learnt from [Maldev Academy](https://maldevacademy.com), it is an awesome course, highly recommend
 - Inspired by [HellShell](https://github.com/NUL0x4C/HellShell)
-- A special thanks to the researchers and developers whose work has inspired, contributed to, and made this tool possible.
-  - [Clematis](https://github.com/CBLabresearch/Clematis), [Donut](https://github.com/TheWover/donut) and [PS2EXE](https://github.com/MScholtes/PS2EXE)
+- A special thanks to the researchers and developers whose work has inspired, contributed to, and made this tool possible. All credit goes to the original authors of the techniques and tools:
+  - [Clematis](https://github.com/CBLabresearch/Clematis)
+  - [Donut](https://github.com/TheWover/donut)
+  - [PS2EXE](https://github.com/MScholtes/PS2EXE)
