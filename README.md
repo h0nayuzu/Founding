@@ -7,23 +7,18 @@
 ## Features ✨
 ### Core Features (Applied in Every Compilation)
 
-- **Dynamic API Hashing**  
-  - Dynamic API Hashing generates unique hash values for API functions at runtime
-    
-- **IAT Camouflage**
-  - Invokes a selection of Windows API functions, elevating the final binary's legitimacy
- 
-- **Minimal CRT**
-  - Removing the CRT Library to have control of what functions are shown on the Import Address Table
- 
-- **Watermark**
-  - Inject custom Watermarks to resulting PE artifacts - in DOS Stub, Checksum, as a standalone PE Section, to file's Overlay
- 
-- **Resource File**
-  - Embed the final binary with set of file property details similar to cleanmgr.exe executable
- 
-- **Preamble 0xfc 0x48**
-  - Each shellcode will be added  the preamble xFCx48 in order to bypass some static analysis
+- **Dynamic API Hashing**   
+  Generates unique hash values for API functions at runtime to evade detection.
+- **IAT Camouflage**   
+  Invokes select Windows API functions to enhance binary legitimacy.
+- **Minimal CRT**   
+  Removes the CRT Library for precise control over the Import Address Table.
+- **Watermark**   
+  Embeds custom watermarks in DOS Stub, Checksum, PE Section, or file overlay.
+- **Resource File**   
+  Embeds file properties resembling `cleanmgr.exe` for authenticity.
+- **Preamble 0xFC 0x48**   
+  Prepends `xFCx48` to shellcode to bypass static analysis.
  
 ### Encryption and Obfuscation:
 
