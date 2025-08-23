@@ -62,9 +62,9 @@
 ### Optional features
 
 #### Indirect Syscalls 
-- **Hells-Hall** 🔥  
+- **Hells-Hall**   
   Change all implementation to Indirect Syscalls (HellsHall) including optional flags.
-- **Syswhispers3** 🌬️  
+- **Syswhispers3**   
   Change all implementation to Indirect Syscalls (SysWhispers3) including optional flags.
 
 #### Compiler 
