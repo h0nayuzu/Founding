@@ -5,7 +5,7 @@
 ## Description
 Founding is a tool that receives a Shellcode in ```.bin```, ```.exe``` or ```.dll``` format, Obfuscates or Encrypts this shellcode and then generates a new binary utilizing some execution techniques.
 
-### The tool has the following features for Encryption and Obfuscation:
+### Founding has the following features for Encryption and Obfuscation:
 
 - Supports IPv4/IPv6/MAC/UUID Obfuscation
 
@@ -15,7 +15,7 @@ Founding is a tool that receives a Shellcode in ```.bin```, ```.exe``` or ```.dl
 
 - Randomly generated encryption keys on every run
 
-### The tool has the following generators types to permit the usage of ```.bin```,```.exe``` and ```.dll```:
+### Founding has the following generators types to permit the usage of ```.bin```,```.exe``` and ```.dll```:
 
 - **raw**
   - Use of .bin payload
@@ -30,7 +30,7 @@ Founding is a tool that receives a Shellcode in ```.bin```, ```.exe``` or ```.dl
   - Use PS2EXE to create a .exe and then use donut to create a .bin
 
 
-### The tool has the following features for Executing the Shellcode:
+### Founding has the following features for Executing the Shellcode:
 - **APC**
   - Asynchronous Procedure Calls
 
@@ -61,8 +61,35 @@ Founding is a tool that receives a Shellcode in ```.bin```, ```.exe``` or ```.dl
 - **Local-Hollowing**
   - Duplicates thread to recreate and run the PE in suspended main thread
 
-### The tool has the following optional features:
+### Founding has the following optional features:
 
+- **Local-Hollowing**
+  - Duplicates thread to recreate and run the PE in suspended main thread
+
+
+- **Local-Hollowing**
+  - Duplicates thread to recreate and run the PE in suspended main thread
+ 
+- **Local-Hollowing**
+  - Duplicates thread to recreate and run the PE in suspended main thread
+ 
+- **Local-Hollowing**
+  - Duplicates thread to recreate and run the PE in suspended main thread
+ 
+- **Local-Hollowing**
+  - Duplicates thread to recreate and run the PE in suspended main thread
+ 
+- **Local-Hollowing**
+  - Duplicates thread to recreate and run the PE in suspended main thread
+ 
+- **Local-Hollowing**
+  - Duplicates thread to recreate and run the PE in suspended main thread
+ 
+- **Local-Hollowing**
+  - Duplicates thread to recreate and run the PE in suspended main thread
+ 
+- **Local-Hollowing**
+  - Duplicates thread to recreate and run the PE in suspended main thread
 
 ## Usage
 ![GitHub Logo](/Founding/Usage.png)
