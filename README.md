@@ -2,6 +2,7 @@
 ![GitHub Logo](/Founding/eren1.png)
 
 ##
+**Tags:** `C` `Python` `Assembly` `Windows`
 [Features](https://github.com/SenSecurity/Founding/tree/main#features-) | [Usage](https://github.com/SenSecurity/Founding/tree/main?tab=readme-ov-file#usage-) | [Demo](https://github.com/SenSecurity/Founding/tree/main#demo-)
 
 ## Overview 📖
