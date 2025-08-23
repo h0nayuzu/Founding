@@ -16,35 +16,35 @@ Founding is a tool that receives a Shellcode in ```.bin```, .exe or .dll format,
 - Randomly generated encryption keys on every run
 
 ### The tool has the following features for Executing the Shellcode:
-- APC
+- **APC**
   - Asynchronous Procedure Calls
 
-- Early-Bird-Debug
--   Asynchronous Procedure Calls with a Remote Debug Process
+- **Early-Bird-Debug**
+  - Asynchronous Procedure Calls with a Remote Debug Process
 
-- Early-Bird-Debug
--   Asynchronous Procedure Calls with a Remote Suspended Process
+- **Early-Bird-Debug**
+  - Asynchronous Procedure Calls with a Remote Suspended Process
 
-- EnumThreadWindows             
--   Callback function EnumThreadWindows
+- **EnumThreadWindows**
+  - Callback function EnumThreadWindows
 
-- Local-Mapping-Inject
--   Local Mapping and Thread in Suspend State
+- **Local-Mapping-Inject**
+  - Local Mapping and Thread in Suspend State
   
-- Early-Cascade 
--   Early-cascade Hooking ntdll!SE_DllLoaded to execute the payload
+- **Early-Cascade**
+  - Early-cascade Hooking ntdll!SE_DllLoaded to execute the payload
 
-- Fibers
--   Fibers executes by switching execution contexts without creating new threads
+- **Fibers**
+  - Fibers executes by switching execution contexts without creating new threads
 
-- Process-Hypnosis
--   Create child process in debug mode, detach debugger, and execute payload
+- **Process-Hypnosis**
+  - Create child process in debug mode, detach debugger, and execute payload
 
-- Tp-Alloc
--   Use Thread Pool API (TpAllocWait/TpSetWait) to queue shellcode execution
+- **Tp-Alloc**
+  - Use Thread Pool API (TpAllocWait/TpSetWait) to queue shellcode execution
 
-- Local-Hollowing
--    Duplicates thread to recreate and run the PE in suspended main thread
+- **Local-Hollowing**
+  - Duplicates thread to recreate and run the PE in suspended main thread
 
 ### The tool has the following optional features:
 
