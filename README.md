@@ -153,9 +153,11 @@ Founding.exe donut mimikatz.exe mac fibers --hells-hall
 [+] Shinzo wo Sasageyo! Erwin.exe Created.
 ```
 
-### Note
+### Notes
 - Shellcodes that need an interactive shell like *mimikatz* can't be used with Remote Process techniques.
-- To utilize the compile functionality I recommend downloading the releases because it will have all the necessary dependencies.
+- Download the zip from releases
+- The code from each compilation can be found on \output\code\
+- To test newly crafted DLLs, a dedicated executable file, ```dlltest.exe```, has been prepared and can be located within the \founding\misc\dll_test directory.
 ## Demo
 ### Meterpreter
 [![Meterpreter](https://i.imgur.com/hucwlKw.png)](https://youtu.be/71vjbatJMIo)
