@@ -118,14 +118,10 @@ Founding is a tool that receives a Shellcode in ```.bin```, ```.exe``` or ```.dl
 ![GitHub Logo](/Founding/helper1.png)
 ![GitHub Logo](/Founding/helper2.png)
 
-```bash
-Founding.exe <Input Payload FileName> <Enc/Obf *Option*> <Shellcode Execution type> <Optional flag>
-```
-### Utilize Donut to generate the Shellcode
+### Sintax
 
-To help generating shellcode I added to the releases [donut](https://github.com/TheWover/donut), using this project we can provide an ```.exe``` binary that we want to run and donut will generate ```.bin``` shellcode.
 ```bash
-donut.exe --input:mimikatz.exe --output:mimi.bin
+Founding.exe <Generator type> <File.bin/exe/dll> <Enc/Obf Option> <Execution type> <Optional flags>
 ```
 
 ### Example Command
