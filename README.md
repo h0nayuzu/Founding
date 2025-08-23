@@ -22,59 +22,42 @@
  
 ### Encryption and Obfuscation:
 
-- Supports IPv4/IPv6/MAC/UUID Obfuscation
-
-- Supports XOR/RC4/AES encryption
-
-- Supports payload padding
-
-- Randomly generated encryption keys on every run
+- Supports **IPv4/IPv6/MAC/UUID** obfuscation.
+- Offers **XOR**, **RC4**, and **AES** encryption.
+- Includes **payload padding** for extra obfuscation.
+- Generates **random encryption keys** per run.
 
 ### Generators for the usage of ```.bin```,```.exe``` and ```.dll```:
 
-- **Raw**
-  - Use of .bin payload
-
-- **Donut**
-  - Use of donut to create a .bin without amsi bypass
-
-- **Clematis**
-  - Use of clematis to create a .bin with garble obfuscation and compression
-
-- **Powershell-donut**
-  - Use PS2EXE to create a .exe and then use donut to create a .bin
+- **Raw**   
+  Directly processes `.bin` payloads.
+- **Donut**  
+  Uses Donut to create `.bin` without AMSI bypass.
+- **Clematis**   
+  Employs Clematis for `.bin` with garble obfuscation and compression.
+- **Powershell-donut**   
+  Converts `.exe` to `.bin` using PS2EXE and Donut.
 
 
 ### Execution types:
-- **APC**
-  - Asynchronous Procedure Calls
-
-- **Early-Bird-Debug**
-  - Asynchronous Procedure Calls with a Remote Debug Process
-
-- **Early-Bird-Debug**
-  - Asynchronous Procedure Calls with a Remote Suspended Process
-
-- **EnumThreadWindows**
-  - Callback function EnumThreadWindows
-
-- **Local-Mapping-Inject**
-  - Local Mapping and Thread in Suspend State
-  
-- **Early-Cascade**
-  - Early-cascade Hooking ntdll!SE_DllLoaded to execute the payload
-
-- **Fibers**
-  - Fibers executes by switching execution contexts without creating new threads
-
-- **Process-Hypnosis**
-  - Create child process in debug mode, detach debugger, and execute payload
-
-- **Tp-Alloc**
-  - Use Thread Pool API (TpAllocWait/TpSetWait) to queue shellcode execution
-
-- **Local-Hollowing**
-  - Duplicates thread to recreate and run the PE in suspended main thread
+- **APC**   
+  Executes via Asynchronous Procedure Calls.
+- **Early-Bird-Debug**   
+  Uses APC with a remote debug or suspended process.
+- **EnumThreadWindows**  
+  Leverages the EnumThreadWindows callback function.
+- **Local-Mapping-Inject**   
+  Performs local mapping with a suspended thread.
+- **Early-Cascade**   
+  Hooks `ntdll!SE_DllLoaded` for payload execution.
+- **Fibers**   
+  Switches execution contexts without new threads.
+- **Process-Hypnosis**   
+  Runs payload in a debugged child process, then detaches.
+- **Tp-Alloc**   
+  Queues shellcode using Thread Pool API (`TpAllocWait`/`TpSetWait`).
+- **Local-Hollowing**   
+  Duplicates and runs PE in a suspended main thread.
 
 ### Optional features:
 
