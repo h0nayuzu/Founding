@@ -1,0 +1,47 @@
+﻿  Encryption.c
+C:\Users\SenSe\Desktop\Founding\Founding\Encryption.c(105,7): warning C4133: 'function': incompatible types - from 'USTRING *' to 'USTRING *'
+C:\Users\SenSe\Desktop\Founding\Founding\Encryption.c(93,11): warning C4047: 'initializing': 'NTSTATUS' differs in levels of indirection from 'void *'
+C:\Users\SenSe\Desktop\Founding\Founding\Encryption.c(123,11): warning C4047: 'initializing': 'ULONG' differs in levels of indirection from 'void *'
+C:\Users\SenSe\Desktop\Founding\Founding\Encryption.c(124,11): warning C4047: 'initializing': 'DWORD' differs in levels of indirection from 'void *'
+C:\Users\SenSe\Desktop\Founding\Founding\Encryption.c(126,11): warning C4047: 'initializing': 'DWORD' differs in levels of indirection from 'void *'
+C:\Users\SenSe\Desktop\Founding\Founding\Encryption.c(130,11): warning C4047: 'initializing': 'DWORD' differs in levels of indirection from 'void *'
+C:\Users\SenSe\Desktop\Founding\Founding\Encryption.c(226,47): warning C4047: '==': 'DWORD' differs in levels of indirection from 'void *'
+  Injection.c
+  main.c
+C:\Users\SenSe\Desktop\Founding\Founding\main.c(423,9): warning C4013: 'time' undefined; assuming extern returning int
+C:\Users\SenSe\Desktop\Founding\Founding\main.c(21,8): warning C4047: 'initializing': 'DWORD' differs in levels of indirection from 'void *'
+C:\Users\SenSe\Desktop\Founding\Founding\main.c(27,8): warning C4047: 'initializing': 'DWORD' differs in levels of indirection from 'void *'
+C:\Users\SenSe\Desktop\Founding\Founding\main.c(31,8): warning C4047: 'initializing': 'DWORD' differs in levels of indirection from 'void *'
+C:\Users\SenSe\Desktop\Founding\Founding\main.c(35,8): warning C4047: 'initializing': 'DWORD' differs in levels of indirection from 'void *'
+  IO.c
+C:\Users\SenSe\Desktop\Founding\Founding\IO.c(49,45): warning C4047: '==': 'DWORD' differs in levels of indirection from 'void *'
+C:\Users\SenSe\Desktop\Founding\Founding\IO.c(16,8): warning C4047: 'initializing': 'DWORD' differs in levels of indirection from 'void *'
+C:\Users\SenSe\Desktop\Founding\Founding\IO.c(17,8): warning C4047: 'initializing': 'DWORD' differs in levels of indirection from 'void *'
+C:\Users\SenSe\Desktop\Founding\Founding\IO.c(84,45): warning C4047: '==': 'DWORD' differs in levels of indirection from 'void *'
+C:\Users\SenSe\Desktop\Founding\Founding\IO.c(60,8): warning C4047: 'initializing': 'DWORD' differs in levels of indirection from 'void *'
+C:\Users\SenSe\Desktop\Founding\Founding\IO.c(61,8): warning C4047: 'initializing': 'DWORD' differs in levels of indirection from 'void *'
+C:\Users\SenSe\Desktop\Founding\Founding\IO.c(97,8): warning C4047: 'initializing': 'DWORD' differs in levels of indirection from 'void *'
+C:\Users\SenSe\Desktop\Founding\Founding\IO.c(133,41): warning C4133: 'function': incompatible types - from 'char *' to 'LPCWSTR'
+C:\Users\SenSe\Desktop\Founding\Founding\IO.c(133,56): warning C4133: 'function': incompatible types - from 'char [260]' to 'LPWSTR'
+C:\Users\SenSe\Desktop\Founding\Founding\IO.c(419,41): warning C4133: 'function': incompatible types - from 'char *' to 'LPCWSTR'
+C:\Users\SenSe\Desktop\Founding\Founding\IO.c(419,56): warning C4133: 'function': incompatible types - from 'char [260]' to 'LPWSTR'
+C:\Users\SenSe\Desktop\Founding\Founding\IO.c(486,41): warning C4133: 'function': incompatible types - from 'char *' to 'LPCWSTR'
+C:\Users\SenSe\Desktop\Founding\Founding\IO.c(486,56): warning C4133: 'function': incompatible types - from 'char [260]' to 'LPWSTR'
+C:\Users\SenSe\Desktop\Founding\Founding\IO.c(637,41): warning C4133: 'function': incompatible types - from 'char *' to 'LPCWSTR'
+C:\Users\SenSe\Desktop\Founding\Founding\IO.c(637,56): warning C4133: 'function': incompatible types - from 'char [260]' to 'LPWSTR'
+C:\Users\SenSe\Desktop\Founding\Founding\IO.c(2971,8): warning C4047: 'initializing': 'DWORD' differs in levels of indirection from 'void *'
+  Obfuscation.c
+C:\Users\SenSe\Desktop\Founding\Founding\Obfuscation.c(37,42): warning C4047: '==': 'SIZE_T' differs in levels of indirection from 'void *'
+C:\Users\SenSe\Desktop\Founding\Founding\Obfuscation.c(97,42): warning C4047: '==': 'SIZE_T' differs in levels of indirection from 'void *'
+C:\Users\SenSe\Desktop\Founding\Founding\Obfuscation.c(170,42): warning C4047: '==': 'SIZE_T' differs in levels of indirection from 'void *'
+C:\Users\SenSe\Desktop\Founding\Founding\Obfuscation.c(233,42): warning C4047: '==': 'SIZE_T' differs in levels of indirection from 'void *'
+  StringFunctions.c
+  Generating code
+  Previous IPDB was built with incompatible compiler, fall back to full compilation.
+C:\Users\SenSe\Desktop\Founding\Founding\Obfuscation.c(28): warning C4172: returning address of local variable or temporary: result
+C:\Users\SenSe\Desktop\Founding\Founding\Obfuscation.c(162): warning C4172: returning address of local variable or temporary: result
+C:\Users\SenSe\Desktop\Founding\Founding\Obfuscation.c(91): warning C4172: returning address of local variable or temporary: Output
+C:\Users\SenSe\Desktop\Founding\Founding\Obfuscation.c(225): warning C4172: returning address of local variable or temporary: Output
+  All 71 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Founding.vcxproj -> C:\Users\SenSe\Desktop\Founding\x64\Release\Founding.exe
