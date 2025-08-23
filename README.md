@@ -17,7 +17,7 @@ Founding is a tool that receives a Shellcode in ```.bin```, .exe or .dll format,
 
 ### The tool has the following features for Executing the Shellcode:
 - APC
--   Asynchronous Procedure Calls
+  - Asynchronous Procedure Calls
 
 - Early-Bird-Debug
 -   Asynchronous Procedure Calls with a Remote Debug Process
