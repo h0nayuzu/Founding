@@ -23,6 +23,7 @@ Founding is a tool that receives a Shellcode in ```.bin```, ```.exe``` or ```.dl
  
 - **Preamble 0xfc 0x48**
   - Each shellcode will be added  the preamble xFCx48 in order to bypass some static analysis
+ 
 
 ### Founding has the following features for Encryption and Obfuscation:
 
@@ -180,10 +181,12 @@ Founding.exe donut mimikatz.exe mac fibers --hells-hall
 - Within the \founding\dependencies\ directory, you will find the ```vs_BuildTools.exe``` file, accompanied by a Readme.txt document, both of which are essential for Clang-LLVM compiler.
   
 ## Demo
-### Meterpreter
+### Cobalt Strike Beacon on Falcon Crowd Strike
 [![Meterpreter](https://i.imgur.com/hucwlKw.png)](https://youtu.be/71vjbatJMIo)
-### Mimikatz
+https://youtu.be/YTB3MrO5PiE
+### PowerUp on Cortex Palo Alto
 [![Mimikatz](https://i.imgur.com/aJz4aFI.png)](https://youtu.be/l__9zza21V8)
+https://youtu.be/zrT6AcZFC1o?si=gkxY7Dj7cI8Lv2s5
 ## Credits
 - Some techniques used learnt from [Maldev Academy](https://maldevacademy.com), it is an awesome course, highly recommend
 - Inspired by [HellShell](https://github.com/NUL0x4C/HellShell)
