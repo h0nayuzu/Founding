@@ -21,13 +21,13 @@ Founding is a tool that receives a Shellcode in ```.bin```, ```.exe``` or ```.dl
   - Use of .bin payload
 
  - **donut**
-  - Use of donut to create a .bin without amsi bypass
+  - Use of .bin payload
 
  - **clematis**
-  - Use of clematis to create a .bin with garble obfuscation and compression
+  - Use of .bin payload
 
  - **powershell-donut**
-  - Use PS2EXE to create a .exe and then use donut to create a .bin
+  - Use of .bin payload
 
 ### The tool has the following features for Executing the Shellcode:
 - **APC**
