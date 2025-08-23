@@ -87,7 +87,7 @@ Founding is a tool that receives a Shellcode in ```.bin```, ```.exe``` or ```.dl
   - Etw-Trace-Event - Patch NtTraceEvent to blind EDR telemetry
   - Etw-pEventWriteFull - Patch private function EtwpEventWriteFull to return invalid parameters to blind EDR telemetry
  
-- **SANDBOX Bypasses**
+- **Sandbox Bypasses**
   - Api-Hammering - Creates a random file, reads/writes random data, delaying execution for 10 sec
   - Delay-Mwfmoex - Use MsgWaitForMultipleObjectsEx delaying execution for 10 sec
   - Fibonacci - Calculate Fibonacci delaying execution for 10 sec
@@ -96,7 +96,7 @@ Founding is a tool that receives a Shellcode in ```.bin```, ```.exe``` or ```.dl
   - Processes - Checks if the system is running less than 50 processes it assumes as sandboxed environment
   - Hardware - Checks if the system is running less of 2 processors, 2 gb ram and 2 usbs mounted it assumes as sandboxed environment
  
-- **PAYLOAD CONTROL**
+- **Payload Control**
   - Check-Running - Check if the executable is already running, if it is, prevent duplicate execution
   - Self-Delete -  Ensure the payload deletes it self during execution, if deletion fails, deletes file content reducing its size to zero bytes
  
