@@ -111,9 +111,7 @@ Founding is a tool that receives a Shellcode in ```.bin```, ```.exe``` or ```.dl
   - Decoy - Embed a decoy file (e.g. PDF) to be executed alongside the payload
 
 ## Usage
-![GitHub Logo](/Founding/Usage.png)
-
-### Generators
+### Generator Types
 ![GitHub Logo](/Founding/generators.png)
 
 ### Executions types and Optional flags
