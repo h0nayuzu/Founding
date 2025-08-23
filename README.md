@@ -183,7 +183,7 @@ Founding.exe donut mimikatz.exe mac fibers --hells-hall
 ```
 
 ### Notes
-- Shellcodes that need an interactive shell like *mimikatz* can't be used with Remote Process techniques.
+- Shellcodes requiring interactive shells (e.g., *Mimikatz*) are incompatible with remote process techniques.
 - Download the zip from releases
 - The code from each compilation can be found on \output\code\
 - To test newly crafted DLLs, a dedicated executable file, `dlltest.exe`, has been prepared and can be located within the `\founding\misc\dll_test` directory.
