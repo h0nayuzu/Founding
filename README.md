@@ -183,8 +183,8 @@ Founding.exe donut mimikatz.exe mac fibers --hells-hall
   
 ## Demo
 ### Cobalt Strike Beacon on Falcon Crowd Strike
-[![Meterpreter](https://i.imgur.com/hucwlKw.png)](https://youtu.be/71vjbatJMIo)
-https://youtu.be/YTB3MrO5PiE
+[![Meterpreter](https://i.imgur.com/hucwlKw.png)](https://youtu.be/YTB3MrO5PiE)
+
 ### PowerUp on Cortex Palo Alto
 [![Mimikatz](https://i.imgur.com/aJz4aFI.png)](https://youtu.be/l__9zza21V8)
 https://youtu.be/zrT6AcZFC1o?si=gkxY7Dj7cI8Lv2s5
