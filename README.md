@@ -15,6 +15,8 @@ Founding is a tool that receives a Shellcode in ```.bin```, ```.exe``` or ```.dl
 
 - Randomly generated encryption keys on every run
 
+### The tool has the following generators types to permit the usage of ```.exe``` and ```.dll```:
+
 ### The tool has the following features for Executing the Shellcode:
 - **APC**
   - Asynchronous Procedure Calls
