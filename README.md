@@ -139,7 +139,7 @@
 - **Decoy**   
   Embed a decoy file (e.g., PDF) to be executed alongside the payload.
 
-## Usage
+## Usage 📖
 ### Generator Types
 ![GitHub Logo](/Founding/generators.png)
 
@@ -186,20 +186,20 @@ Founding.exe donut mimikatz.exe mac fibers --hells-hall
 - Shellcodes that need an interactive shell like *mimikatz* can't be used with Remote Process techniques.
 - Download the zip from releases
 - The code from each compilation can be found on \output\code\
-- To test newly crafted DLLs, a dedicated executable file, ```dlltest.exe```, has been prepared and can be located within the \founding\misc\dll_test directory.
-- Within the \founding\dependencies\ directory, you will find the ```vs_BuildTools.exe``` file, accompanied by a Readme.txt document, both of which are essential for Clang-LLVM compiler.
+- To test newly crafted DLLs, a dedicated executable file, `dlltest.exe`, has been prepared and can be located within the `\founding\misc\dll_test` directory.
+- Within the `\founding\dependencies\` directory, you will find the `vs_BuildTools.exe` file, accompanied by a Readme.txt document, both of which are essential for Clang-LLVM compiler.
   
-## Demo
+## Demo 🎥
 ### Cobalt Strike Beacon on Falcon Crowd Strike
 [![Cobalt](https://i.imgur.com/ilgUtBA.png)](https://youtu.be/YTB3MrO5PiE)
 
 ### PowerUp on Cortex Palo Alto
 [![Cortex](https://i.imgur.com/aJz4aFI.png)](https://youtu.be/zrT6AcZFC1o?si=gkxY7Dj7cI8Lv2s5)
 
-## Credits
+## Credits 🙌
 - Some techniques used learnt from [Maldev Academy](https://maldevacademy.com), it is an awesome course, highly recommend
 - Inspired by [HellShell](https://github.com/NUL0x4C/HellShell)
-- A special thanks to the researchers and developers whose work has inspired, contributed to, and made this tool possible. All credit goes to the original authors of the techniques and tools:
+- Special thanks to the authors of:
   - [Clematis](https://github.com/CBLabresearch/Clematis)
   - [Donut](https://github.com/TheWover/donut)
   - [PS2EXE](https://github.com/MScholtes/PS2EXE)
