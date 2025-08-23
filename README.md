@@ -29,6 +29,10 @@ Founding is a tool that receives a Shellcode in ```.bin```, ```.exe``` or ```.dl
  
 #### Encryption and Obfuscation:
 
+#### For every compilation:
+
+- **Dynamic API Hashing**  
+
 - Supports IPv4/IPv6/MAC/UUID Obfuscation
 
 - Supports XOR/RC4/AES encryption
