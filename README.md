@@ -9,6 +9,14 @@ Founding is a tool that receives a Shellcode in ```.bin```, ```.exe``` or ```.dl
 
 #### For every compilaion:
 
+
+
+
+
+
+
+
+
 - **Dynamic API Hashing**
   - Dynamic API Hashing generates unique hash values for API functions at runtime
     
