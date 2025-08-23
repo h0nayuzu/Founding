@@ -5,7 +5,7 @@
 Founding is a tool that receives a Shellcode in ```.bin```, ```.exe``` or ```.dll``` format, Obfuscates or Encrypts this shellcode and then generates a new binary utilizing some execution techniques.
 
 ## Features
-### Founding has the following features for every compilaion
+### Founding has the following features for every compilaion:
 
 - **Dynamic API Hashing**
   - Dynamic API Hashing generates unique hash values for API functions at runtime
