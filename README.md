@@ -2,7 +2,7 @@
 ![GitHub Logo](/Founding/eren1.png)
 
 ## Overview 📖
-**Founding** is a powerful tool that processes shellcode in `.bin`, `.exe`, or `.dll` formats, applying advanced **obfuscation** or **encryption** techniques to generate stealthy binaries with sophisticated execution methods. 
+**Founding** is a tool that processes shellcode in `.bin`, `.exe`, or `.dll` formats, applying advanced **obfuscation** or **encryption** techniques to generate stealthy binaries with sophisticated execution methods. 
 
 ## Features ✨
 ### Core Features (Applied in Every Compilation)
