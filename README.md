@@ -5,7 +5,7 @@
 Founding is a tool that receives a Shellcode in ```.bin```, ```.exe``` or ```.dll``` format, Obfuscates or Encrypts this shellcode and then generates a new binary utilizing some execution techniques.
 
 ## Features
-### Founding has the following features For every compilation:
+### In every compilation:
 
 - **Dynamic API Hashing**  
   - Dynamic API Hashing generates unique hash values for API functions at runtime
@@ -25,7 +25,7 @@ Founding is a tool that receives a Shellcode in ```.bin```, ```.exe``` or ```.dl
 - **Preamble 0xfc 0x48**
   - Each shellcode will be added  the preamble xFCx48 in order to bypass some static analysis
  
-### Founding has the following features for Encryption and Obfuscation:
+### Encryption and Obfuscation:
 
 - Supports IPv4/IPv6/MAC/UUID Obfuscation
 
@@ -35,7 +35,7 @@ Founding is a tool that receives a Shellcode in ```.bin```, ```.exe``` or ```.dl
 
 - Randomly generated encryption keys on every run
 
-### Founding has the following generators types to permit the usage of ```.bin```,```.exe``` and ```.dll```:
+### Generators types to permit the usage of ```.bin```,```.exe``` and ```.dll```:
 
 - **Raw**
   - Use of .bin payload
@@ -50,7 +50,7 @@ Founding is a tool that receives a Shellcode in ```.bin```, ```.exe``` or ```.dl
   - Use PS2EXE to create a .exe and then use donut to create a .bin
 
 
-### Founding has the following features for Executing the Shellcode:
+### Execution types:
 - **APC**
   - Asynchronous Procedure Calls
 
@@ -81,7 +81,7 @@ Founding is a tool that receives a Shellcode in ```.bin```, ```.exe``` or ```.dl
 - **Local-Hollowing**
   - Duplicates thread to recreate and run the PE in suspended main thread
 
-### Founding has the following optional features:
+### Optional features:
 
 - **Indirect Syscalls**
   - Hells-Hall - Change all implementation to Indirect Syscalls (HellsHall) including optional flags
