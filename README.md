@@ -17,16 +17,16 @@ Founding is a tool that receives a Shellcode in ```.bin```, ```.exe``` or ```.dl
 
 ### Founding has the following generators types to permit the usage of ```.bin```,```.exe``` and ```.dll```:
 
-- **raw**
+- **Raw**
   - Use of .bin payload
 
-- **donut**
+- **Donut**
   - Use of donut to create a .bin without amsi bypass
 
-- **clematis**
+- **Clematis**
   - Use of clematis to create a .bin with garble obfuscation and compression
 
-- **powershell-donut**
+- **Powershell-donut**
   - Use PS2EXE to create a .exe and then use donut to create a .bin
 
 
