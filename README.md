@@ -1,9 +1,26 @@
-# Founding
+<img width="304" height="62" alt="image" src="https://github.com/user-attachments/assets/5dec8f85-bded-46d0-8bf2-92f8534d3ba4" /># Founding
 
 ![GitHub Logo](/Founding/eren1.png)
 
 ## Description
 Founding is a tool that receives a Shellcode in ```.bin```, ```.exe``` or ```.dll``` format, Obfuscates or Encrypts this shellcode and then generates a new binary utilizing some execution techniques.
+
+### Founding has the following features for every compilaion\
+
+- **Dynamic API Hashing**
+  - Dynamic API Hashing generates unique hash values for API functions at runtime
+    
+- **IAT Camouflage**
+  - Invokes a selection of Windows API functions, elevating the final binary's legitimacy
+ 
+- **Minimal CRT**
+  - Removing the CRT Library to have control of what functions are shown on the Import Address Table
+ 
+- **Watermark**
+  - Inject custom Watermarks to resulting PE artifacts - in DOS Stub, Checksum, as a standalone PE Section, to file's Overlay
+ 
+- **Resource File**
+  - Embed the final binary with set of file property details similar to cleanmgr.exe executable
 
 ### Founding has the following features for Encryption and Obfuscation:
 
