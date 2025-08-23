@@ -1,4 +1,4 @@
-# Founding 🛠️
+# Founding 2.0 🛠️
 ![GitHub Logo](/Founding/eren1.png)
 
 ## Overview 📖
