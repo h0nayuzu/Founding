@@ -186,7 +186,7 @@ Founding.exe donut mimikatz.exe mac fibers --hells-hall
 [![Cobalt](https://i.imgur.com/ilgUtBA.png)](https://youtu.be/YTB3MrO5PiE)
 
 ### PowerUp on Cortex Palo Alto
-[![Cortex]([https://i.imgur.com/aJz4aFI.png)](https://youtu.be/zrT6AcZFC1o?si=gkxY7Dj7cI8Lv2s5)
+[![Cortex](https://i.imgur.com/aJz4aFI.png)](https://youtu.be/zrT6AcZFC1o?si=gkxY7Dj7cI8Lv2s5)
 
 ## Credits
 - Some techniques used learnt from [Maldev Academy](https://maldevacademy.com), it is an awesome course, highly recommend
