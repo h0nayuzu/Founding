@@ -27,11 +27,8 @@ Founding is a tool that receives a Shellcode in ```.bin```, ```.exe``` or ```.dl
 - **Preamble 0xfc 0x48**
   - Each shellcode will be added  the preamble xFCx48 in order to bypass some static analysis
  
+
 #### Encryption and Obfuscation:
-
-#### For every compilation:
-
-- **Dynamic API Hashing**  
 
 - Supports IPv4/IPv6/MAC/UUID Obfuscation
 
