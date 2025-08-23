@@ -3,7 +3,7 @@
 ![GitHub Logo](/Founding/eren1.png)
 
 ## Description
-Founding is a tool that receives a Shellcode in ```.bin``` format, Obfuscates or Encrypts this shellcode and then generates a new binary utilizing some execution techniques.
+Founding is a tool that receives a Shellcode in ```.bin```, .exe or .dll format, Obfuscates or Encrypts this shellcode and then generates a new binary utilizing some execution techniques.
 
 ### The tool has the following features for Encryption and Obfuscation:
 
@@ -16,15 +16,38 @@ Founding is a tool that receives a Shellcode in ```.bin``` format, Obfuscates or
 - Randomly generated encryption keys on every run
 
 ### The tool has the following features for Executing the Shellcode:
-- Asynchronous Procedure Calls
+- APC
+-   Asynchronous Procedure Calls
 
-- Asynchronous Procedure Calls with a Remote Debug Process
+- Early-Bird-Debug
+-   Asynchronous Procedure Calls with a Remote Debug Process
 
-- Asynchronous Procedure Calls with a Remote Suspended Process
+- Early-Bird-Debug
+-   Asynchronous Procedure Calls with a Remote Suspended Process
 
-- Callback function EnumThreadWindows
+- EnumThreadWindows             
+-   Callback function EnumThreadWindows
 
-- Local Mapping and Thread in Suspend State
+- Local-Mapping-Inject
+-   Local Mapping and Thread in Suspend State
+  
+- Early-Cascade 
+-   Early-cascade Hooking ntdll!SE_DllLoaded to execute the payload
+
+- Fibers
+-   Fibers executes by switching execution contexts without creating new threads
+
+- Process-Hypnosis
+-   Create child process in debug mode, detach debugger, and execute payload
+
+- Tp-Alloc
+-   Use Thread Pool API (TpAllocWait/TpSetWait) to queue shellcode execution
+
+- Local-Hollowing
+-    Duplicates thread to recreate and run the PE in suspended main thread
+
+### The tool has the following optional features:
+
 
 ## Usage
 ![GitHub Logo](/Founding/Usage.png)
