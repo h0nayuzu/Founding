@@ -21,6 +21,9 @@ Founding is a tool that receives a Shellcode in ```.bin```, ```.exe``` or ```.dl
  
 - **Resource File**
   - Embed the final binary with set of file property details similar to cleanmgr.exe executable
+ 
+- **Preamble 0xfc 0x48**
+  - Each shellcode will be added  the preamble xFCx48 in order to bypass some static analysis
 
 ### Founding has the following features for Encryption and Obfuscation:
 
