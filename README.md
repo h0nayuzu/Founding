@@ -20,13 +20,13 @@ Founding is a tool that receives a Shellcode in ```.bin```, ```.exe``` or ```.dl
 - **raw**
   - Use of .bin payload
 
- - **donut**
+- **raw**
   - Use of .bin payload
 
- - **clematis**
+- **raw**
   - Use of .bin payload
 
- - **powershell-donut**
+- **raw**
   - Use of .bin payload
 
 ### The tool has the following features for Executing the Shellcode:
