@@ -113,6 +113,7 @@ Founding is a tool that receives a Shellcode in ```.bin```, ```.exe``` or ```.dl
 ## Usage
 ![GitHub Logo](/Founding/Usage.png)
 
+### Generators
 ```bash
 Founding.exe <Input Payload FileName> <Enc/Obf *Option*> <Shellcode Execution type> <Optional flag>
 ```
