@@ -1,5 +1,4 @@
-
-#Founding
+# Founding
 ![GitHub Logo](/Founding/eren1.png)
 
 ## Description
