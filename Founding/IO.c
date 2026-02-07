@@ -4175,13 +4175,13 @@ INT PrintHelp2(IN CHAR* _Argv0) {
 	printf("\t\t\t #######################################\n");
 	printf("\t\t\t # Founding - In Search of the Unknown #\n");
 	printf("\t\t\t #######################################\n\n");
-	printf("[!] Usage: Founding.exe <Generator Type> <Payload>\n\n");
-	printf("[i] Generators Types Options Can Be: \n");
+	printf("[!] 用法: Founding.exe <生成器类型> <Payload>\n\n");
+	printf("[i] 生成器类型选项可以是： \n");
 	printf("\n");
-	printf("\t[+] raw <payload.bin>                  ::: Use of .bin payload\n");
-	printf("\t[+] donut <payload.exe\\dll>            ::: Use of donut to create a .bin without amsi bypass\n");
-	printf("\t[+] clematis <payload.exe>             ::: Use of clematis to create a .bin with garble obfuscation and compression\n");
-	printf("\t[+] powershell-donut <payload.ps1>     ::: Use PS2EXE to create a .exe and then use donut to create a .bin\n\n");
+	printf("\t[+] raw <payload.bin>                  ::: 使用 .bin payload\n");
+	printf("\t[+] donut <payload.exe\\dll>            ::: 使用 donut 创建不带 AMSI 绕过的 .bin\n");
+	printf("\t[+] clematis <payload.exe>             ::: 使用 clematis 创建带有乱码混淆和压缩的 .bin\n");
+	printf("\t[+] powershell-donut <payload.ps1>     ::: 使用 PS2EXE 创建 .exe，然后使用 donut 创建 .bin\n\n");
 	//system("PAUSE");
 	return -1;
 
