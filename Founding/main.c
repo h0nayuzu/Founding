@@ -36,6 +36,10 @@ int main(int argc, char* argv[])
 
 
 	// checking input
+	if (argc == 2 && _stricmp(argv[1], "-h") == 0) {
+		return PrintHelp(argv[0]);
+	}
+
 	if (argc <= 2) {
 		return PrintHelp2(argv[0]);
 	}
@@ -2453,6 +2457,3 @@ int main(int argc, char* argv[])
 
 	return 0;
 }
-
-
-
