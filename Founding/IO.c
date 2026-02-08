@@ -1,4 +1,4 @@
-﻿#include <windows.h>
+#include <windows.h>
 #include <stdio.h>
 #include "Common.h"
 #include <string.h>
@@ -496,7 +496,7 @@ void watermark(int argc, char* argv[]) {
 
 	// Initialize the STARTUPINFO structure
 	STARTUPINFOA Si = { sizeof(Si) };
-	PROCESS_INFORMATION Pi;
+	PROCESS_INFORMATION Pi = { 0 }; // Initialize to zero
 
 	// Create the process
 	if (!CreateProcessA(NULL, watermarkCmd, NULL, NULL, FALSE, 0, NULL, NULL, &Si, &Pi)) {
@@ -522,8 +522,12 @@ void watermark(int argc, char* argv[]) {
 	}
 
 	// Clean up
-	CloseHandle(Pi.hProcess);
-	CloseHandle(Pi.hThread);
+	if (Pi.hProcess != NULL && Pi.hProcess != INVALID_HANDLE_VALUE) {
+		CloseHandle(Pi.hProcess);
+	}
+	if (Pi.hThread != NULL && Pi.hThread != INVALID_HANDLE_VALUE) {
+		CloseHandle(Pi.hThread);
+	}
 }
 
 
