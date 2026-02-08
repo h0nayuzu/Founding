@@ -54,7 +54,8 @@ int main(int argc, char* argv[])
 	}
 
 	//compile flags
-	char compileFlags[256] = "";
+	char compileFlags[1024] = "";
+	size_t current_len = 0;
 
 	//exec flags
 	BOOL normal_apc = FALSE;
@@ -534,10 +535,10 @@ int main(int argc, char* argv[])
 		normal_apc = TRUE;
 		if (normal_apc) {
 			
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "normal-apc"); 
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "normal-apc");
 		}
 
 		//create apc.c
@@ -597,10 +598,10 @@ int main(int argc, char* argv[])
 		normal_Early_Bird_Suspended = TRUE;
 		if (normal_Early_Bird_Suspended) {
 
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "normal-earlybird-suspended");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "normal-earlybird-suspended");
 		}
 
 		//create apc.c
@@ -659,10 +660,10 @@ int main(int argc, char* argv[])
 		normal_Early_Bird_Debug = TRUE;
 		if (normal_Early_Bird_Debug) {
 
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "normal-earlybird-debug");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "normal-earlybird-debug");
 		}
 
 		//create 
@@ -718,10 +719,10 @@ int main(int argc, char* argv[])
 		normal_EnumThreadWindows = TRUE;
 		if (normal_EnumThreadWindows) {
 
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "normal-enumthreadwindows");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "normal-enumthreadwindows");
 		}
 
 		//create callback_enumthreadwindows.c
@@ -775,10 +776,10 @@ int main(int argc, char* argv[])
 		normal_Local_Mapping_Inject = TRUE;
 		if (normal_Local_Mapping_Inject) {
 
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "normal-localmapping");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "normal-localmapping");
 		}
 
 		//create local_mapping.c
@@ -833,10 +834,10 @@ int main(int argc, char* argv[])
 		normal_Early_Cascade = TRUE;
 		if (normal_Early_Cascade) {
 
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "normal-earlycascade");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "normal-earlycascade");
 		}
 
 		//create local_mapping.c
@@ -893,10 +894,10 @@ int main(int argc, char* argv[])
 		normal_fibers = TRUE;
 		if (normal_fibers) {
 
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "normal-fibers");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "normal-fibers");
 		}
 
 		//create local_mapping.c
@@ -952,10 +953,10 @@ int main(int argc, char* argv[])
 		normal_hypnosis = TRUE;
 		if (normal_hypnosis) {
 
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "normal-hypnosis");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "normal-hypnosis");
 		}
 
 		//create local_mapping.c
@@ -1011,10 +1012,10 @@ int main(int argc, char* argv[])
 		normal_tpalloc = TRUE;
 		if (normal_tpalloc) {
 
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "normal-tpalloc");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "normal-tpalloc");
 		}
 
 		//create local_mapping.c
@@ -1069,10 +1070,10 @@ int main(int argc, char* argv[])
 		normal_local_hollowing = TRUE;
 		if (normal_local_hollowing) {
 
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "normal-local-hollowing");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "normal-local-hollowing");
 		}
 
 		//create local_mapping.c
@@ -1474,10 +1475,10 @@ int main(int argc, char* argv[])
 		copyFileFromFolder("syswhispers3\\init", "syscalls.obj");
 		copyFileFromFolder("syswhispers3\\init", "syscalls_llvm_c.obj");
 
-		if (strlen(compileFlags) > 0) {
-			strcat(compileFlags, " ");
+		if (current_len > 0) {
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 		}
-		strcat(compileFlags, "init-syswhispers");
+		current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "init-syswhispers");
 
 
 			//apc
@@ -1485,10 +1486,10 @@ int main(int argc, char* argv[])
 		{
 
 
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "syswhispers-apc");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "syswhispers-apc");
 
 			//copy contents for hellshall apc
 			copyFileContents_evasionFolder("syswhispers3\\execution\\apc", "apc.c");
@@ -1497,10 +1498,10 @@ int main(int argc, char* argv[])
 			//early_bird_debug
 		if (normal_Early_Bird_Debug)
 		{
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "syswhispers-earlybird-debug");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "syswhispers-earlybird-debug");
 
 			copyFileContents_evasionFolder("syswhispers3\\execution\\early_bird_debug", "early_bird_debug.c");
 
@@ -1509,20 +1510,20 @@ int main(int argc, char* argv[])
 			//early_bird_suspended
 		if (normal_Early_Bird_Suspended)
 		{
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "syswhispers-earlybird-suspended");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "syswhispers-earlybird-suspended");
 			copyFileContents_evasionFolder("syswhispers3\\execution\\early_bird_suspended", "early_bird_suspended.c");
 		}
 		
 			//enumthreadwindows
 		if (normal_EnumThreadWindows)
 		{
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "syswhispers-enumthreadwindows");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "syswhispers-enumthreadwindows");
 			copyFileContents_evasionFolder("syswhispers3\\execution\\callback_enumthreadwindows", "callback_enumthreadwindows.c");
 		}
 		
@@ -1530,10 +1531,10 @@ int main(int argc, char* argv[])
 
 		if (normal_Local_Mapping_Inject)
 		{
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "syswhispers-localmapping");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "syswhispers-localmapping");
 			copyFileContents_evasionFolder("syswhispers3\\execution\\local_mapping", "local_mapping.c");
 		}
 
@@ -1541,10 +1542,10 @@ int main(int argc, char* argv[])
 
 		if (normal_Early_Cascade)
 		{
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "syswhispers-earlycascade");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "syswhispers-earlycascade");
 			copyFileContents_evasionFolder("syswhispers3\\execution\\early_cascade", "earlycascade.c");
 		}
 		
@@ -1552,10 +1553,10 @@ int main(int argc, char* argv[])
 
 		if (normal_fibers)
 		{
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "syswhispers-fibers");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "syswhispers-fibers");
 			copyFileContents_evasionFolder("syswhispers3\\execution\\fibers", "fibers.c");
 		}
 		
@@ -1563,10 +1564,10 @@ int main(int argc, char* argv[])
 
 		if (normal_hypnosis)
 		{
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "syswhispers-hypnosis");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "syswhispers-hypnosis");
 			copyFileContents_evasionFolder("syswhispers3\\execution\\process_hypnosis", "process_hypnosis.c");
 		}
 
@@ -1574,10 +1575,10 @@ int main(int argc, char* argv[])
 
 		if (normal_tpalloc)
 		{
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "syswhispers-tpalloc");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "syswhispers-tpalloc");
 			copyFileContents_evasionFolder("syswhispers3\\execution\\tpallocinject", "tpallocinject.c");
 		}
 		
@@ -1585,10 +1586,10 @@ int main(int argc, char* argv[])
 
 		if (normal_local_hollowing)
 		{
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "syswhispers-local-hollowing");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "syswhispers-local-hollowing");
 			copyFileContents_evasionFolder("syswhispers3\\execution\\local_hollowing", "local_hollowing.c");
 		}
 
@@ -1598,10 +1599,10 @@ int main(int argc, char* argv[])
 
 		if (amsiFlag_opensession)
 		{
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "syswhispers-amsi-opensession");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "syswhispers-amsi-opensession");
 			copyFileContents_evasionFolder("syswhispers3\\evasion\\amsi", "amsiopensession.c");
 		}
 		
@@ -1609,10 +1610,10 @@ int main(int argc, char* argv[])
 
 		if (amsiFlag_scanbuffer)
 		{
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "syswhispers-amsi-scanbuffer");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "syswhispers-amsi-scanbuffer");
 			copyFileContents_evasionFolder("syswhispers3\\evasion\\amsi", "amsiscanbuffer.c");
 		}
 		
@@ -1620,10 +1621,10 @@ int main(int argc, char* argv[])
 
 		if (amsiFlag_signature)
 		{
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "syswhispers-amsi-signature");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "syswhispers-amsi-signature");
 			copyFileContents_evasionFolder("syswhispers3\\evasion\\amsi", "amsisignature.c");
 		}
 
@@ -1631,10 +1632,10 @@ int main(int argc, char* argv[])
 
 		if (amsiFlag_codetrust)
 		{
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "syswhispers-amsi-codetrust");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "syswhispers-amsi-codetrust");
 			copyFileContents_evasionFolder("syswhispers3\\evasion\\amsi", "codetrust.c");
 		}
 
@@ -1643,40 +1644,40 @@ int main(int argc, char* argv[])
 			//disk createfile
 		if (unhookingFlag_diskcreatefile)
 		{
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "syswhispers-unhooking-createfile");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "syswhispers-unhooking-createfile");
 			copyFileContents_evasionFolder("syswhispers3\\evasion\\unhooking", "unhooking_disk_createfile.c");
 		}
 
 			//known dlls
 		if (unhookingFlag_knowndlls)
 		{
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "syswhispers-unhooking-known-dlls");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "syswhispers-unhooking-known-dlls");
 			copyFileContents_evasionFolder("syswhispers3\\evasion\\unhooking", "unhooking_known_dlls.c");
 		}
 		
 			//process debug
 		if (unhookingFlag_debug)
 		{
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "syswhispers-unhooking-debug");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "syswhispers-unhooking-debug");
 			copyFileContents_evasionFolder("syswhispers3\\evasion\\unhooking", "unhooking_process_debug.c");
 		}
 		
 			//hookchain
 		if (unhookingFlag_hookchain)
 		{
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "syswhispers-unhooking-hookchain");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "syswhispers-unhooking-hookchain");
 			copyFileContents_evasionFolder("syswhispers3\\evasion\\unhooking", "hook.c");
 		}
 
@@ -1685,20 +1686,20 @@ int main(int argc, char* argv[])
 			//eventwrite
 		if (etwFlag_eventwrite)
 		{
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "syswhispers-etw-eventwrite");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "syswhispers-etw-eventwrite");
 			copyFileContents_evasionFolder("syswhispers3\\evasion\\etw", "etweventwrite.c");
 		}
 			
 			//TraceEvent
 		if (etwFlag_TraceEvent)
 		{
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "syswhispers-etw-traceevent");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "syswhispers-etw-traceevent");
 			copyFileContents_evasionFolder("syswhispers3\\evasion\\etw", "ntTraceEvent.c");
 		}
 
@@ -1706,10 +1707,10 @@ int main(int argc, char* argv[])
 
 		if (etwFlag_peventwritefull)
 		{
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "syswhispers-etw-peventwritefull");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "syswhispers-etw-peventwritefull");
 			copyFileContents_evasionFolder("syswhispers3\\evasion\\etw", "etwpeventwritefull.c");
 		}
 
@@ -1745,10 +1746,10 @@ int main(int argc, char* argv[])
 
 		getfilecontentcomment("Ntcall();", "output\\code\\exec.c", "//hells");
 
-		if (strlen(compileFlags) > 0) {
-			strcat(compileFlags, " ");
+		if (current_len > 0) {
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 		}
-		strcat(compileFlags, "init-syscalls");
+		current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "init-syscalls");
 
 
 			//apc
@@ -1756,10 +1757,10 @@ int main(int argc, char* argv[])
 		{
 
 
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "hellshall-apc");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "hellshall-apc");
 
 			//copy contents for hellshall apc
 			copyFileContents_evasionFolder("hells_hall\\execution\\apc", "apc.c");
@@ -1770,10 +1771,10 @@ int main(int argc, char* argv[])
 		if (normal_Early_Bird_Debug) 
 		{
 
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "hellshall-earlybird-debug");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "hellshall-earlybird-debug");
 
 
 			//copy contents for hellshall early_bird_debug
@@ -1784,10 +1785,10 @@ int main(int argc, char* argv[])
 		if (normal_Early_Bird_Suspended)
 		{
 
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "hellshall-earlybird-suspended");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "hellshall-earlybird-suspended");
 
 
 			//copy contents for hellshall early_bird_debug
@@ -1798,10 +1799,10 @@ int main(int argc, char* argv[])
 			//enumthreadwindows
 		if (normal_EnumThreadWindows)
 		{
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "hellshall-enumthreadwindows");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "hellshall-enumthreadwindows");
 
 			copyFileContents_evasionFolder("hells_hall\\execution\\callback_enumthreadwindows", "callback_enumthreadwindows.c");
 
@@ -1810,10 +1811,10 @@ int main(int argc, char* argv[])
 			//local_mapping_inject
 		if (normal_Local_Mapping_Inject)
 		{
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "hellshall-localmapping");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "hellshall-localmapping");
 
 			copyFileContents_evasionFolder("hells_hall\\execution\\local_mapping", "local_mapping.c");
 		}
@@ -1821,39 +1822,39 @@ int main(int argc, char* argv[])
 			//early cascade
 		if (normal_Early_Cascade)
 		{
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "hellshall-earlycascade");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "hellshall-earlycascade");
 			copyFileContents_evasionFolder("hells_hall\\execution\\early_cascade", "earlycascade.c");
 		}
 
 			//fibers
 		if (normal_fibers)
 		{
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "hellshall-fibers");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "hellshall-fibers");
 			copyFileContents_evasionFolder("hells_hall\\execution\\fibers", "fibers.c");
 		}
 
 			//process hypnosis	
 		if (normal_hypnosis)
 		{
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "hellshall-hypnosis");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "hellshall-hypnosis");
 			copyFileContents_evasionFolder("hells_hall\\execution\\process_hypnosis", "process_hypnosis.c");
 		}
 			//thread pools
 		if (normal_tpalloc)
 		{
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "hellshall-tpalloc");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "hellshall-tpalloc");
 			copyFileContents_evasionFolder("hells_hall\\execution\\tpallocinject", "tpallocinject.c");
 		}
 
@@ -1861,10 +1862,10 @@ int main(int argc, char* argv[])
 			//local hollowing
 		if (normal_local_hollowing)
 		{
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "hellshall-local-hollowing");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "hellshall-local-hollowing");
 			copyFileContents_evasionFolder("hells_hall\\execution\\local_hollowing", "local_hollowing.c");
 		}
 
@@ -1874,20 +1875,20 @@ int main(int argc, char* argv[])
 			//amsi opensession
 		if (amsiFlag_opensession)
 		{
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "hellshall-amsi-opensession");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "hellshall-amsi-opensession");
 			copyFileContents_evasionFolder("hells_hall\\evasion\\amsi", "amsiopensession.c");
 		}
 			//amsi scanbuffer
 
 		if (amsiFlag_scanbuffer)
 		{
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "hellshall-amsi-scanbuf");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "hellshall-amsi-scanbuf");
 			copyFileContents_evasionFolder("hells_hall\\evasion\\amsi", "amsiscanbuffer.c");
 		}
 
@@ -1895,20 +1896,20 @@ int main(int argc, char* argv[])
 
 		if (amsiFlag_signature)
 		{
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "hellshall-amsi-signature");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "hellshall-amsi-signature");
 			copyFileContents_evasionFolder("hells_hall\\evasion\\amsi", "amsisignature.c");
 		}
 			//amsi codetrust
 
 		if (amsiFlag_codetrust)
 		{
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "hellshall-amsi-codetrust");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "hellshall-amsi-codetrust");
 			copyFileContents_evasionFolder("hells_hall\\evasion\\amsi", "codetrust.c");
 		}
 
@@ -1917,40 +1918,40 @@ int main(int argc, char* argv[])
 			//disk createfile
 		if (unhookingFlag_diskcreatefile)
 		{
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "hellshall-unhooking-createfile");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "hellshall-unhooking-createfile");
 			copyFileContents_evasionFolder("hells_hall\\evasion\\unhooking", "unhooking_disk_createfile.c");
 		}
 
 			//known dlls
 		if (unhookingFlag_knowndlls)
 		{
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "hellshall-unhooking-knowndlls");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "hellshall-unhooking-knowndlls");
 			copyFileContents_evasionFolder("hells_hall\\evasion\\unhooking", "unhooking_known_dlls.c");
 		}
 
 			//unhooking debug
 		if (unhookingFlag_debug)
 		{
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "hellshall-unhooking-debug");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "hellshall-unhooking-debug");
 			copyFileContents_evasionFolder("hells_hall\\evasion\\unhooking", "unhooking_process_debug.c");
 		}
 
 			//hookchain
 		if (unhookingFlag_hookchain)
 		{
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "hellshall-unhooking-hookchain");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "hellshall-unhooking-hookchain");
 			copyFileContents_evasionFolder("hells_hall\\evasion\\unhooking", "hook.c");
 		}
 
@@ -1959,20 +1960,20 @@ int main(int argc, char* argv[])
 			//etw eventwrite
 		if (etwFlag_eventwrite)
 		{
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "hellshall-etw-eventwrite");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "hellshall-etw-eventwrite");
 			copyFileContents_evasionFolder("hells_hall\\evasion\\etw", "etweventwrite.c");
 		}
 				//etw traceevent
 
 		if (etwFlag_TraceEvent)
 		{
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "hellshall-etw-traceevent");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "hellshall-etw-traceevent");
 			copyFileContents_evasionFolder("hells_hall\\evasion\\etw", "ntTraceEvent.c");
 		}
 
@@ -1980,10 +1981,10 @@ int main(int argc, char* argv[])
 
 		if (etwFlag_peventwritefull)
 		{
-			if (strlen(compileFlags) > 0) {
-				strcat(compileFlags, " ");
+			if (current_len > 0) {
+				current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
 			}
-			strcat(compileFlags, "hellshall-etw-peventwritefull");
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "hellshall-etw-peventwritefull");
 			copyFileContents_evasionFolder("hells_hall\\evasion\\etw", "etwpeventwritefull.c");
 		}
 
@@ -2182,19 +2183,31 @@ int main(int argc, char* argv[])
 
 	//amsi flags
 	if (amsiFlag_opensession) {
-		strcat(compileFlags, "amsi-opensession");
+		if (current_len > 0) {
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
+		}
+		current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "amsi-opensession");
 	}
 
 	if (amsiFlag_scanbuffer) {
-		strcat(compileFlags, "amsi-scanbuffer");
+		if (current_len > 0) {
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
+		}
+		current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "amsi-scanbuffer");
 	}
 
 	if (amsiFlag_signature) {
-		strcat(compileFlags, "amsi-signature");
+		if (current_len > 0) {
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
+		}
+		current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "amsi-signature");
 	}
 
 	if (amsiFlag_codetrust) {
-		strcat(compileFlags, "amsi-codetrust");
+		if (current_len > 0) {
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
+		}
+		current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "amsi-codetrust");
 	}
 
 	//unhooking flags
@@ -2203,7 +2216,10 @@ int main(int argc, char* argv[])
 		if (strlen(compileFlags) > 0) {
 			strcat(compileFlags, " ");
 		}
-		strcat(compileFlags, "unhooking-createfile");
+		if (current_len > 0) {
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
+		}
+		current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "unhooking-createfile");
 	}
 
 	if (unhookingFlag_knowndlls) {
@@ -2211,7 +2227,10 @@ int main(int argc, char* argv[])
 		if (strlen(compileFlags) > 0) {
 			strcat(compileFlags, " ");
 		}
-		strcat(compileFlags, "unhooking-knowndlls");
+		if (current_len > 0) {
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
+		}
+		current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "unhooking-knowndlls");
 	}
 
 	if (unhookingFlag_debug) {
@@ -2219,7 +2238,10 @@ int main(int argc, char* argv[])
 		if (strlen(compileFlags) > 0) {
 			strcat(compileFlags, " ");
 		}
-		strcat(compileFlags, "unhooking-debug");
+		if (current_len > 0) {
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
+		}
+		current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "unhooking-debug");
 	}
 
 	if (unhookingFlag_hookchain) {
@@ -2227,7 +2249,10 @@ int main(int argc, char* argv[])
 		if (strlen(compileFlags) > 0) {
 			strcat(compileFlags, " ");
 		}
-		strcat(compileFlags, "hookchain");
+		if (current_len > 0) {
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
+		}
+		current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "hookchain");
 	}
 
 	//etw
@@ -2237,7 +2262,10 @@ int main(int argc, char* argv[])
 		if (strlen(compileFlags) > 0) {
 			strcat(compileFlags, " ");
 		}
-		strcat(compileFlags, "etw-eventwrite");
+		if (current_len > 0) {
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
+		}
+		current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "etw-eventwrite");
 	}
 
 	if (etwFlag_TraceEvent) {
@@ -2245,7 +2273,10 @@ int main(int argc, char* argv[])
 		if (strlen(compileFlags) > 0) {
 			strcat(compileFlags, " ");
 		}
-		strcat(compileFlags, "etw-trace-event");
+		if (current_len > 0) {
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
+		}
+		current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "etw-trace-event");
 	}
 
 	if (etwFlag_peventwritefull) {
@@ -2253,7 +2284,10 @@ int main(int argc, char* argv[])
 		if (strlen(compileFlags) > 0) {
 			strcat(compileFlags, " ");
 		}
-		strcat(compileFlags, "etw-peventwritefull");
+		if (current_len > 0) {
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
+		}
+		current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "etw-peventwritefull");
 	}
 
 	//sandbox
@@ -2263,7 +2297,10 @@ int main(int argc, char* argv[])
 		if (strlen(compileFlags) > 0) {
 			strcat(compileFlags, " ");
 		}
-		strcat(compileFlags, "api-hammering");
+		if (current_len > 0) {
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
+		}
+		current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "api-hammering");
 	}
 
 	if (sandboxFlag_mouseclicks) {
@@ -2271,7 +2308,10 @@ int main(int argc, char* argv[])
 		if (strlen(compileFlags) > 0) {
 			strcat(compileFlags, " ");
 		}
-		strcat(compileFlags, "mouse-clicks");
+		if (current_len > 0) {
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
+		}
+		current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "mouse-clicks");
 	}
 
 	if (sandboxFlag_resolution) {
@@ -2279,7 +2319,10 @@ int main(int argc, char* argv[])
 		if (strlen(compileFlags) > 0) {
 			strcat(compileFlags, " ");
 		}
-		strcat(compileFlags, "resolution");
+		if (current_len > 0) {
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
+		}
+		current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "resolution");
 	}
 
 	if (sandboxFlag_processes) {
@@ -2287,7 +2330,10 @@ int main(int argc, char* argv[])
 		if (strlen(compileFlags) > 0) {
 			strcat(compileFlags, " ");
 		}
-		strcat(compileFlags, "processes");
+		if (current_len > 0) {
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
+		}
+		current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "processes");
 	}
 
 	if (sandboxFlag_hardware) {
@@ -2295,7 +2341,10 @@ int main(int argc, char* argv[])
 		if (strlen(compileFlags) > 0) {
 			strcat(compileFlags, " ");
 		}
-		strcat(compileFlags, "hardware");
+		if (current_len > 0) {
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
+		}
+		current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "hardware");
 	}
 
 	if (sandboxFlag_mwfmoex) {
@@ -2303,7 +2352,10 @@ int main(int argc, char* argv[])
 		if (strlen(compileFlags) > 0) {
 			strcat(compileFlags, " ");
 		}
-		strcat(compileFlags, "delay-mwfmoex");
+		if (current_len > 0) {
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
+		}
+		current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "delay-mwfmoex");
 	}
 
 	if (sandboxFlag_ntdelay) {
@@ -2311,7 +2363,10 @@ int main(int argc, char* argv[])
 		if (strlen(compileFlags) > 0) {
 			strcat(compileFlags, " ");
 		}
-		strcat(compileFlags, "ntdelay");
+		if (current_len > 0) {
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
+		}
+		current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "ntdelay");
 	}
 
 	if (sandboxFlag_fibonacci) {
@@ -2319,7 +2374,10 @@ int main(int argc, char* argv[])
 		if (strlen(compileFlags) > 0) {
 			strcat(compileFlags, " ");
 		}
-		strcat(compileFlags, "fibonacci");
+		if (current_len > 0) {
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
+		}
+		current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "fibonacci");
 	}
 
 
@@ -2329,7 +2387,10 @@ int main(int argc, char* argv[])
 		if (strlen(compileFlags) > 0) {
 			strcat(compileFlags, " ");
 		}
-		strcat(compileFlags, "check-running");
+		if (current_len > 0) {
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
+		}
+		current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "check-running");
 	}
 
 	if (payloadFlag_selfdelete) {
@@ -2337,7 +2398,10 @@ int main(int argc, char* argv[])
 		if (strlen(compileFlags) > 0) {
 			strcat(compileFlags, " ");
 		}
-		strcat(compileFlags, "self-delete");
+		if (current_len > 0) {
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
+		}
+		current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "self-delete");
 	}
 
 	
@@ -2349,7 +2413,10 @@ int main(int argc, char* argv[])
 		if (strlen(compileFlags) > 0) {
 			strcat(compileFlags, " ");
 		}
-		strcat(compileFlags, "no-window");
+		if (current_len > 0) {
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
+		}
+		current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "no-window");
 	}
 
 	if (miscFlag_printf) {
@@ -2357,7 +2424,10 @@ int main(int argc, char* argv[])
 		if (strlen(compileFlags) > 0) {
 			strcat(compileFlags, " ");
 		}
-		strcat(compileFlags, "no-print");
+		if (current_len > 0) {
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
+		}
+		current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "no-print");
 	}
 
 	if (miscFlag_serviice) {
@@ -2365,7 +2435,10 @@ int main(int argc, char* argv[])
 		if (strlen(compileFlags) > 0) {
 			strcat(compileFlags, " ");
 		}
-		strcat(compileFlags, "service");
+		if (current_len > 0) {
+			current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, " ");
+		}
+		current_len += snprintf(compileFlags + current_len, sizeof(compileFlags) - current_len, "service");
 	}
 
 
